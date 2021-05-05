@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>977591653356-dcaoo5tcur8m03hr19gckmpg9c0knn7l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.977591653356-dcaoo5tcur8m03hr19gckmpg9c0knn7l</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>977591653356-h20usb1a6gu19ss0qbl41aochl2subpj.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyALy4KdPK3__3_k4pubF2Oroq7Mh0gDqwg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>977591653356</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.alexBaurov.SpochanSecondVersion</string>
+	<key>PROJECT_ID</key>
+	<string>spochan-87772</string>
+	<key>STORAGE_BUCKET</key>
+	<string>spochan-87772.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:977591653356:ios:3b8226aeebc415efc8a6c9</string>
+	<key>DATABASE_URL</key>
+	<string>https://spochan-87772.firebaseio.com</string>
+</dict>
+</plist>
