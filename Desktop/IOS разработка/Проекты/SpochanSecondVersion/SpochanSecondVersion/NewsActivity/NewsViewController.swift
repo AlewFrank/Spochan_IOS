@@ -15,8 +15,6 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let db = Firestore.firestore()
     
-    var allCells = [UITableViewCell]()
-    
     var indexPathForSegue: IndexPath = []
     
     var isDirector: Bool = false
@@ -131,9 +129,6 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
         
-        allCells.append(cell) //массив будет постоянно добавляться при скролле, но если написать код с удалением лишних, то при добавлении новой записи приложение вылетает, так что лучше забить и оставить как есть
-        
-        
         cell.update(newsTitle: newNotes[indexPath.section].newsTitle ?? "newsTitle",
                     newsDescription: newNotes[indexPath.section].newsDescription ?? "newsDescription",
                     newsData: newNotes[indexPath.section].newsData ?? "newsData",
@@ -143,13 +138,6 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     newsImageUrl_3: newNotes[indexPath.section].newsImageUrl_3 ?? "",
                     newsImageUrl_4: newNotes[indexPath.section].newsImageUrl_4 ?? "",
                     newsImageUrl_5: newNotes[indexPath.section].newsImageUrl_5 ?? "")
-        
-        
-        
-//        DispatchQueue.main.async {//загружаем в другом потоке, чтоб не тормозить приложение
-//            cell.loadImage(imageUrl: self.newNotes[indexPath.section].newsImageUrl_1 ?? "")
-//        }
-    
         
         
 //        cell.backgroundColor = UIColor.white
@@ -166,7 +154,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
        }
     
     
-    //такой хитрый способ, чтоб можно было как бы нажать на изображение
+    //такой хитрый способ, чтоб можно было как бы нажать на изображение, у нас прозрачная кнопка как бы поверх изображения
     @IBAction func imagePressed(_ sender: UIButton) {
         if let indexPath = newsTableView.indexPath(forItem: sender) {indexPathForSegue = indexPath}
     }
@@ -219,16 +207,11 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         guard segue.identifier == "showImagesForNews" else {return} //в кавычках это идентификатор перехода
         guard let destVC = segue.destination as? ImagesViewController else {return}
-        let newsImageUrl_1 = newNotes[indexPathForSegue.section].newsImageUrl_1
-        let newsImageUrl_2 = newNotes[indexPathForSegue.section].newsImageUrl_2
-        let newsImageUrl_3 = newNotes[indexPathForSegue.section].newsImageUrl_3
-        let newsImageUrl_4 = newNotes[indexPathForSegue.section].newsImageUrl_4
-        let newsImageUrl_5 = newNotes[indexPathForSegue.section].newsImageUrl_5
-        destVC.newsImageUrl_1 = newsImageUrl_1
-        destVC.newsImageUrl_2 = newsImageUrl_2
-        destVC.newsImageUrl_3 = newsImageUrl_3
-        destVC.newsImageUrl_4 = newsImageUrl_4
-        destVC.newsImageUrl_5 = newsImageUrl_5
+        destVC.newsImageUrl_1 = newNotes[indexPathForSegue.section].newsImageUrl_1
+        destVC.newsImageUrl_2 = newNotes[indexPathForSegue.section].newsImageUrl_2
+        destVC.newsImageUrl_3 = newNotes[indexPathForSegue.section].newsImageUrl_3
+        destVC.newsImageUrl_4 = newNotes[indexPathForSegue.section].newsImageUrl_4
+        destVC.newsImageUrl_5 = newNotes[indexPathForSegue.section].newsImageUrl_5
     }
     
 }
@@ -238,7 +221,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
 
 
-extension UITableView { //расширение,чтобы мы могли узнавать indexPath той ячейки, на которую нажали при нажатии на кнопку вперед или назад
+extension UITableView { //расширение,чтобы мы могли узнавать indexPath той ячейки, на которую нажали в методе imagePressed
 func indexPath(forItem: AnyObject) -> IndexPath? {
     let itemPosition: CGPoint = forItem.convert(CGPoint.zero, to: self)
     return self.indexPathForRow(at: itemPosition)

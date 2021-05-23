@@ -20,13 +20,17 @@
 		840C6E1F25F1628A00E4B85B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 840C6E1E25F1628A00E4B85B /* FirebaseAuth */; };
 		840C6E2125F1628A00E4B85B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 840C6E2025F1628A00E4B85B /* FirebaseFirestore */; };
 		840C6E2625F1680A00E4B85B /* LogInActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C6E2525F1680A00E4B85B /* LogInActivityViewController.swift */; };
+		841B762E26593D3700C856A3 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B762D26593D3700C856A3 /* Gradient.swift */; };
 		841D86872637477400E90EC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D86862637477400E90EC1 /* SceneDelegate.swift */; };
 		84C04BEA25F5328000B4825D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C04BE925F5328000B4825D /* User.swift */; };
+		84D7FF4D2646E5E10011471D /* AddCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D7FF4C2646E5E10011471D /* AddCompetitionViewController.swift */; };
+		84D7FF502646E83E0011471D /* FullCompetitionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D7FF4F2646E83E0011471D /* FullCompetitionInfoViewController.swift */; };
 		84F3D2D42624CCE500F82AA2 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D2D32624CCE500F82AA2 /* ImagesViewController.swift */; };
 		84F7CEE2260D169B006C58CD /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7CEE1260D169B006C58CD /* NewsTableViewCell.swift */; };
 		84F7CEEB260D2C2E006C58CD /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7CEEA260D2C2E006C58CD /* CompetitionViewController.swift */; };
 		84F7CEEE260D2C40006C58CD /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7CEED260D2C40006C58CD /* RatingViewController.swift */; };
 		84F7CEF1260D2CFF006C58CD /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7CEF0260D2CFF006C58CD /* TabBar.swift */; };
+		84F9D9E926441C13000D0B1D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 84F9D9E826441C13000D0B1D /* SDWebImage */; };
 		84FB04B92606809C0061AD7E /* newNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB04B82606809C0061AD7E /* newNote.swift */; };
 		84FB04BD260680D90061AD7E /* newNoteFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB04BC260680D90061AD7E /* newNoteFirebase.swift */; };
 		84FB04C0260681110061AD7E /* userService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB04BF260681110061AD7E /* userService.swift */; };
@@ -50,8 +54,11 @@
 		840C6DF725F1573900E4B85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840C6DFE25F1585100E4B85B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		840C6E2525F1680A00E4B85B /* LogInActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInActivityViewController.swift; sourceTree = "<group>"; };
+		841B762D26593D3700C856A3 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		841D86862637477400E90EC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		84C04BE925F5328000B4825D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		84D7FF4C2646E5E10011471D /* AddCompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCompetitionViewController.swift; sourceTree = "<group>"; };
+		84D7FF4F2646E83E0011471D /* FullCompetitionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullCompetitionInfoViewController.swift; sourceTree = "<group>"; };
 		84F3D2D32624CCE500F82AA2 /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		84F7CEE1260D169B006C58CD /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		84F7CEEA260D2C2E006C58CD /* CompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +84,7 @@
 				840C6E2125F1628A00E4B85B /* FirebaseFirestore in Frameworks */,
 				840C6E1F25F1628A00E4B85B /* FirebaseAuth in Frameworks */,
 				840C6E1D25F1628A00E4B85B /* FirebaseStorage in Frameworks */,
+				84F9D9E926441C13000D0B1D /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +168,9 @@
 				84FF87E926258E440019C49F /* newCompetition.swift */,
 				84FF87EC262599ED0019C49F /* newCompetitionFirebase.swift */,
 				84FF87EF26259C1E0019C49F /* competitionService.swift */,
+				84D7FF4C2646E5E10011471D /* AddCompetitionViewController.swift */,
+				84D7FF4F2646E83E0011471D /* FullCompetitionInfoViewController.swift */,
+				841B762D26593D3700C856A3 /* Gradient.swift */,
 			);
 			path = CompetitionActivity;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 				840C6E1C25F1628A00E4B85B /* FirebaseStorage */,
 				840C6E1E25F1628A00E4B85B /* FirebaseAuth */,
 				840C6E2025F1628A00E4B85B /* FirebaseFirestore */,
+				84F9D9E826441C13000D0B1D /* SDWebImage */,
 			);
 			productName = SpochanSecondVersion;
 			productReference = 840C6DE625F1573700E4B85B /* SpochanSecondVersion.app */;
@@ -215,6 +227,7 @@
 			mainGroup = 840C6DDD25F1573700E4B85B;
 			packageReferences = (
 				840C6E1925F1628A00E4B85B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				84F9D9E726441C13000D0B1D /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 840C6DE725F1573700E4B85B /* Products */;
 			projectDirPath = "";
@@ -248,6 +261,7 @@
 				84F7CEEE260D2C40006C58CD /* RatingViewController.swift in Sources */,
 				84C04BEA25F5328000B4825D /* User.swift in Sources */,
 				840052672625C1A60071A8B5 /* newRatingFirebase.swift in Sources */,
+				84D7FF4D2646E5E10011471D /* AddCompetitionViewController.swift in Sources */,
 				84F7CEF1260D2CFF006C58CD /* TabBar.swift in Sources */,
 				840052612625BFB00071A8B5 /* RatingTableViewCell.swift in Sources */,
 				84FF87EA26258E440019C49F /* newCompetition.swift in Sources */,
@@ -260,11 +274,13 @@
 				84FB04B92606809C0061AD7E /* newNote.swift in Sources */,
 				84FB04BD260680D90061AD7E /* newNoteFirebase.swift in Sources */,
 				84FB04C0260681110061AD7E /* userService.swift in Sources */,
+				84D7FF502646E83E0011471D /* FullCompetitionInfoViewController.swift in Sources */,
 				84FF87ED262599EE0019C49F /* newCompetitionFirebase.swift in Sources */,
 				84FF87F026259C1E0019C49F /* competitionService.swift in Sources */,
 				84F3D2D42624CCE500F82AA2 /* ImagesViewController.swift in Sources */,
 				84FB04C3260681700061AD7E /* NewsViewController.swift in Sources */,
 				840C6DEA25F1573700E4B85B /* AppDelegate.swift in Sources */,
+				841B762E26593D3700C856A3 /* Gradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +492,14 @@
 				minimumVersion = 7.7.0;
 			};
 		};
+		84F9D9E726441C13000D0B1D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -498,6 +522,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 840C6E1925F1628A00E4B85B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		84F9D9E826441C13000D0B1D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84F9D9E726441C13000D0B1D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

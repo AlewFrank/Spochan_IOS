@@ -11,6 +11,7 @@ import Foundation
 
 struct appCompetition {
     
+    let competitionId: String?
     let competitionTitle: String?
     let competitionDescription: String?
     let competitionLocation: String?

@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseStorage
+import SDWebImage
 
 
 class NewsTableViewCell: UITableViewCell {
@@ -52,7 +53,6 @@ class NewsTableViewCell: UITableViewCell {
         newsDataLabel.text = newsData
         newsTimeLabel.text = newsTime
 
-        //фотку соревнования вставляем в основном классе NewsViewController
         loadImage(imageUrl: newsImageUrl_1)
         
         //добавить пять фоток и проверить
@@ -91,34 +91,27 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     
-//    Надо загружать через SDWebImage библиотеку, так как там изображения загружаются асинхронно + сразу кешируются + такой тип загрузки используют фейсбук, нетфликс и др, то есть при скролле не придется заново все загружать и еще чет много каких-то плюшек...то, как мы сейчас загружаем изображения через NSData это недопустимо для изображений, которые не находятся на устройстве
-    
-    //Полезные ссылки
-    
-    //видос
-    //https://www.youtube.com/watch?v=cQMca52ul5w
-    
-    //пример рабочего кода + в коментах обсуждение
-    //https://ru.stackoverflow.com/questions/603743/Сильно-тормозит-uitableview-при-загрузке-картинок-из-интернета
-    
-    //ближе к концу есть способы установки этой библиотеки на комп
-    //https://github.com/SDWebImage/SDWebImage
-    
-    //Попробуй открыть видоc и попробовать сделать все по тем инструкциям,если нет,то ищи видосы как сделать другими способами
-    
-    
     func loadImage(imageUrl: String) {
+        
         self.newsImageView.image = nil
         self.loadingBar.isHidden = false
         self.loadingBar.startAnimating()
-        DispatchQueue.main.async { //загружаем изображения в другом потоке, чтоб не тормозить приложение
-            if let url = URL(string: imageUrl) {
-                if let data = try? Data(contentsOf: url) {
-                    self.newsImageView.image = UIImage(data: data)
-                }
-            }
+        
+        let imageUrl1 = URL(string: imageUrl)
+        newsImageView.sd_setImage(with: imageUrl1, completed: {_,_,_,_ in
+            //выполняется когда изображение все же загрузится
             self.loadingBar.isHidden = true
-        }
+        })
+        
+        
+        //этот метод, если изображения находятся на устройстве, а не через интернет
+//        DispatchQueue.main.async { //загружаем изображения в другом потоке, чтоб не тормозить приложение
+//            if let url = URL(string: imageUrl) {
+//                if let data = try? Data(contentsOf: url) {
+//                    self.newsImageView.image = UIImage(data: data)
+//                }
+//            }
+//        }
     }
     
     

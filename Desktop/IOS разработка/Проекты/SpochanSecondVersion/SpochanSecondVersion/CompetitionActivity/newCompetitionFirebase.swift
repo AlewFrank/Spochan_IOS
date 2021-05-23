@@ -14,7 +14,8 @@ extension appCompetition {
     static func build(from documents: [QueryDocumentSnapshot]) -> [appCompetition] {
         var appCompetitions = [appCompetition]()
         for document in documents {
-            appCompetitions.append(appCompetition(competitionTitle: document["competitionTitle"] as? String ?? "",
+            appCompetitions.append(appCompetition(competitionId: document["competitionId"] as? String ?? "",
+                                                  competitionTitle: document["competitionTitle"] as? String ?? "",
                                                   competitionDescription: document["competitionDescription"] as? String ?? "",
                                                   competitionLocation: document["competitionLocation"] as? String ?? "",
                                                   competitionAddress: document["competitionAddress"] as? String ?? "",

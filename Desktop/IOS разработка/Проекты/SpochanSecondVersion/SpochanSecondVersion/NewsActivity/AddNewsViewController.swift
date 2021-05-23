@@ -209,9 +209,7 @@ class AddNewsViewController: UIViewController, UIImagePickerControllerDelegate, 
                 print("Изображение загружено")
             })
         })
-        
-        
-        
+    
         //https://www.youtube.com/watch?v=TAF6cPZxmmI  на 18 минуте важная штука про действие в файле Info.plist
     }
     
